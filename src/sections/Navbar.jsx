@@ -1,8 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import '../App.css'
+import Contact1 from '../pages/Contact1';
 export default function Navbar() {
+    const [isSidebarVisible, setSidebarVisible] = useState(false);
+
+    const toggleSidebar = () => {
+      setSidebarVisible(!isSidebarVisible);
+      console.log(isSidebarVisible)
+    };
     return (
+        <div>
         <header
             style={{ background: "#f0f0f0", backdropFilter: 'blur(10px)' }}
             className="h-20 fixed top-0 left-0 right-0 rounded-md mx-6 my-4 overflow-visible px-4 py-4 flex justify-between items-center z-50"
@@ -57,9 +65,11 @@ export default function Navbar() {
 
             {/* Contact and Blog Buttons */}
             <div className="flex items-center gap-7">
-                <button className="bg-black text-white px-4 py-2 rounded-md">Contact</button>
+                <button onClick={toggleSidebar} className="bg-black text-white px-4 py-2 rounded-md">Contact</button>
                 <button className="text-gray-700 hover:text-blue-600">Blog</button>
             </div>
         </header>
+        {isSidebarVisible && <Contact1/>}
+        </div>
     );
 }

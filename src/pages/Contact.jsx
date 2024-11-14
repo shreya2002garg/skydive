@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <div className="h-full w-80 bg-white shadow-lg p-6 overflow-y-auto transition-transform duration-300 transform translate-x-0">
+    <div className="fixed top-0 right-0 h-full w-80 bg-white shadow-lg p-6 overflow-y-auto transition-transform duration-300 transform translate-x-0 z-50">
       <h2 className="text-xl font-semibold mb-4">Let us know how we can help you.</h2>
       
       <form className="space-y-4">

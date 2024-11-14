@@ -12,3 +12,20 @@
 .dropdown:hover {
     display: flex; /* Show dropdown on hover of nav item or dropdown itself */
 }
+
+@keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    50% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+  }
+  
