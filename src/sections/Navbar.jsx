@@ -4,15 +4,17 @@ import '../App.css'
 export default function Navbar() {
     return (
         <header
-            style={{ background: "hsla(0,0%,100%,.8)", backdropFilter: 'blur(10px)' }}
+            style={{ background: "#f0f0f0", backdropFilter: 'blur(10px)' }}
             className="h-20 fixed top-0 left-0 right-0 rounded-md mx-6 my-4 overflow-visible px-4 py-4 flex justify-between items-center z-50"
         >
             {/* Logo */}
             <div className='flex items-center'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="none" viewBox="0 0 121 108">
-                    <path fill="#22211F" fillRule="evenodd" d="M120.99 15.953c0 6.965-21.382 18.723-120.99 37.97V.001h108.417v8.313s12.573 1.722 12.573 7.639ZM12.804 106.95c-5.722-1.273-9.638-5.318-9.638-11.234 0-5.992 4.066-26.512 105.406-56.694v68.826H28.69c-11.97 0-14.72-.632-15.672-.851-.084-.019-.153-.035-.215-.047Z" clipRule="evenodd"></path>
-                </svg>
-            </div>
+    <NavLink to="/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="none" viewBox="0 0 121 108">
+            <path fill="#22211F" fillRule="evenodd" d="M120.99 15.953c0 6.965-21.382 18.723-120.99 37.97V.001h108.417v8.313s12.573 1.722 12.573 7.639ZM12.804 106.95c-5.722-1.273-9.638-5.318-9.638-11.234 0-5.992 4.066-26.512 105.406-56.694v68.826H28.69c-11.97 0-14.72-.632-15.672-.851-.084-.019-.153-.035-.215-.047Z" clipRule="evenodd"></path>
+        </svg>
+    </NavLink>
+</div>
 
             {/* Navigation Links */}
             <div className="relative">

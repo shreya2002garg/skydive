@@ -12,7 +12,34 @@ export default function Home() {
     setSidebarVisible(!isSidebarVisible);
   };
   return (
-    <div className="mt-20 px-4 sm:px-8 md:px-12 lg:px-20">
+    <div className="mt-20 px-0">
+    {/* Full-width GIF Section with Text and Button on the Left */}
+    <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] flex items-start justify-start mb-8">
+      {/* GIF as background covering the entire container */}
+      <div
+        className="absolute inset-0 w-full h-full bg-cover bg-center"
+        style={{
+          backgroundImage: `url('https://media4.giphy.com/media/dPS8tcMShmHv9U2wfg/giphy.gif?cid=6c09b952rnkjf06q33pp6v1qiyo2o4wjiiptg1ua28mz7o86&ep=v1_gifs_search&rid=giphy.gif&ct=g')`, // Replace with actual GIF URL
+        }}
+      ></div>
+
+      {/* Overlay content aligned to the left */}
+      <div className="relative z-10 text-left text-white p-8 md:p-16 lg:p-20 max-w-[50%]">
+        <h2 className="text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] font-semibold mb-4 leading-tight">
+        Aerial robotics.
+        </h2>
+        <p className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] mb-6">
+        Built for a new era of autonomous work.
+        </p>
+        <button className="px-8 py-4 bg-white text-black font-semibold rounded-md hover:bg-blue-700 transition">
+          Replay Ascend keynote
+        </button>
+      </div>
+
+      {/* Optional overlay to darken the GIF background */}
+      <div className="absolute inset-0 w-full h-full bg-black opacity-50"></div>
+    </div>
+
       <div className="flex flex-col items-center justify-center h-[100vh]">
         <h1 className="text-center text-[24px] sm:text-[20px] md:text-[35px] lg:text-[40px] leading-tight max-w-[90%] lg:max-w-[80%] m-20">
           <span className="block">
@@ -44,9 +71,9 @@ export default function Home() {
             title2="You’ve never seen like this before."
           />
           <HomeCard1
-            description="A world-class drone program starts with Skydio X10. Loaded with the best sensors in its class, guided by the most advanced AI in the sky, and built to gather the data you need, wherever and whenever you need it."
-            title1="Skydio X10:"
-            title2="You’ve never seen like this before."
+            description="Position X10 drones precisely where you need them, launch remotely piloted or autonomous missions at the push of a button, and start collecting data without needing anyone on site."
+            title1="Dock for X10:"
+            title2="Bring the power of autonomy to any site."
           />
         </div>
       </div>
